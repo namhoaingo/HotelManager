@@ -12,4 +12,11 @@ class RoomCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var RoomDisplayLabel: UILabel!
     
+    func changeSelectedColor(){
+        self.backgroundColor = UIColor.green
+    }
+    
+    func changeNonSelectedColor(){
+        self.backgroundColor = UIColor.red
+    }
 }

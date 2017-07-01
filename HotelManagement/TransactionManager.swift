@@ -21,7 +21,10 @@ struct TransactionManager {
             CurrentTransaction = getExistingRental(room)
         }
         else{
-            CurrentTransaction = getNewRental(room)
+            let newTransaction = getNewRental(room)
+            CurrentTransaction = newTransaction
+            // Add to Transaction
+            RentalDictionary[newTransaction.Room!.Id] = newTransaction
         }
         
         // Raise Event 

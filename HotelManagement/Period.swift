@@ -22,8 +22,13 @@ class Period: NSObject{
     
     convenience init( _ checkInDateTime: NSDate, _ checkOutDateTime: NSDate){
         self.init()
+        self.CheckInDateTime = checkInDateTime
+        self.CheckOutDateTime = checkOutDateTime
+    }
+    
+    override init() {
+        self.CheckOutDateTime = NSDate()
         self.CheckInDateTime = NSDate()
-        self.CheckOutDateTime = NSDate()        
     }
 }
 

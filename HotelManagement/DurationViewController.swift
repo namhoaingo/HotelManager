@@ -46,6 +46,7 @@ class DurationViewController: UIViewController {
     {
         if TransactionManager.CurrentTransaction != nil{
             print ("Duration View Controller Re load")
+            
             if let checkInTime = TransactionManager.CurrentTransaction!.Period!.CheckInDateTime{
                 CheckInPicker.date = checkInTime as Date
             }
