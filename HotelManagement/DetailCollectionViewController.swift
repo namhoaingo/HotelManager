@@ -13,7 +13,6 @@ private let reuseIdentifier = "Cell"
 class DetailCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout{
     var HotelInitial : HotelMock = HotelMock()
     var myDelegate : Hotel = Hotel()
-    var transactionManager: TransactionManager = TransactionManager()
     
     override func viewDidLoad() {
         self.myDelegate = HotelInitial.initialHotel()
@@ -51,9 +50,7 @@ class DetailCollectionViewController: UICollectionViewController, UICollectionVi
         print ("row \(indexPath.row) + section \(indexPath.section)" );
         let masterViewController:MasterViewController = self.splitViewController?.viewControllers.first as! MasterViewController
         // Set current Room in Transaction Manager
-        masterViewController.transactionManager = transactionManager
-        transactionManager.setTransaction(self.myDelegate.getRoom(indexPath.row))
-        masterViewController.transactionManager?.RenderNewTransaction = masterViewController.renderView
+        TransactionManager.setTransaction(self.myDelegate.getRoom(indexPath.row))
         
     }
 }

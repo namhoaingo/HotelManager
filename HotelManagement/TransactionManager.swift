@@ -8,16 +8,13 @@
 
 import Foundation
 
-class TransactionManager: NSObject {
+struct TransactionManager {
     // Dictionary contains Room key and Transaction object
-    var RentalDictionary: NSMutableDictionary =  NSMutableDictionary();
+    static var RentalDictionary: NSMutableDictionary =  NSMutableDictionary();
 
-    var CurrentTransaction: Transaction?
+    static var CurrentTransaction: Transaction?
     
-    // This the function to pass in when CurrentRoom got a new value
-    var RenderNewTransaction: (()-> Void)?
-    
-    func setTransaction(_ room: RoomModel){
+    static func setTransaction(_ room: RoomModel){
         
         if RentalDictionary[room.Id] != nil{
             // update
@@ -27,14 +24,12 @@ class TransactionManager: NSObject {
             CurrentTransaction = getNewRental(room)
         }
         
-        if(RenderNewTransaction != nil)
-        {
-            RenderNewTransaction!()
-        }
+        // Raise Event 
+        EventManager.trigger(eventName: EventsConstant.transaction_change.rawValue, information: "")
     }
     
     
-    func getNewRental(_ room: RoomModel)-> Transaction{
+    static func getNewRental(_ room: RoomModel)-> Transaction{
         let transaction: Transaction = Transaction()
         
         // Create temporary rate object
@@ -48,11 +43,11 @@ class TransactionManager: NSObject {
         return transaction
     }
     
-    func getExistingRental(_ room: RoomModel) -> Transaction{
+    static func getExistingRental(_ room: RoomModel) -> Transaction{
         return RentalDictionary[room.Id] as! Transaction
     }
     
-    func addRental(_ transaction: Transaction){
+    static func addRental(_ transaction: Transaction){
         // Check for adding new or edditing
         if let currentRoom = transaction.Room {
             RentalDictionary.setObject(currentRoom.Id, forKey: transaction)
@@ -60,19 +55,19 @@ class TransactionManager: NSObject {
         }
     }
     
-    func getCurrentCheckInDate() -> NSDate{
+    static func getCurrentCheckInDate() -> NSDate{
         return (self.CurrentTransaction?.Period?.CheckInDateTime)!
     }
     
-    func getCurrentCheckOutDate() -> NSDate{
+    static func getCurrentCheckOutDate() -> NSDate{
         return (self.CurrentTransaction?.Period?.CheckOutDateTime)!
     }
     
-    func setCurrentCheckInDate(_ checkInDate: NSDate){
+    static func setCurrentCheckInDate(_ checkInDate: NSDate){
         self.CurrentTransaction?.Period?.CheckInDateTime = checkInDate
     }
     
-    func setCurrentCheckOutDate(_ checkOutDate: NSDate)
+    static func setCurrentCheckOutDate(_ checkOutDate: NSDate)
     {
         self.CurrentTransaction?.Period?.CheckOutDateTime = checkOutDate
     }

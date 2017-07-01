@@ -9,9 +9,6 @@
 import UIKit
 
 class DurationViewController: UIViewController {
-
-    var transactionManager: TransactionManager?
-    
     @IBOutlet weak var CheckIn: UILabel!
     @IBOutlet weak var CheckOut: UILabel!
     @IBOutlet weak var CheckInPicker: UIDatePicker!
@@ -32,28 +29,28 @@ class DurationViewController: UIViewController {
 
     @IBAction func CheckInPickerSelect(_ sender: Any) {
         let checkInDate: NSDate = self.CheckInPicker.date as NSDate
-        if transactionManager?.CurrentTransaction != nil{
-            transactionManager?.setCurrentCheckInDate(checkInDate)
+        if TransactionManager.CurrentTransaction != nil{
+            TransactionManager.setCurrentCheckInDate(checkInDate)
         }
     }
     
     
     @IBAction func CheckOutPickerSelect(_ sender: Any) {
         let checkOutDate: NSDate = self.CheckOutPicker.date as NSDate
-        if transactionManager?.CurrentTransaction != nil{
-            transactionManager?.setCurrentCheckOutDate(checkOutDate)
+        if TransactionManager.CurrentTransaction != nil{
+            TransactionManager.setCurrentCheckOutDate(checkOutDate)
         }
     }
     
     func reloadData()
     {
-        if self.transactionManager?.CurrentTransaction != nil{
+        if TransactionManager.CurrentTransaction != nil{
             print ("Duration View Controller Re load")
-            if let checkInTime = transactionManager?.CurrentTransaction!.Period!.CheckInDateTime{
+            if let checkInTime = TransactionManager.CurrentTransaction!.Period!.CheckInDateTime{
                 CheckInPicker.date = checkInTime as Date
             }
             
-            if let checkOutTime = transactionManager?.CurrentTransaction!.Period!.CheckOutDateTime{
+            if let checkOutTime = TransactionManager.CurrentTransaction!.Period!.CheckOutDateTime{
                 CheckOutPicker.date = checkOutTime as Date
             }
         }

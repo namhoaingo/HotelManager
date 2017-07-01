@@ -26,7 +26,8 @@
 		C75426771EDD217D008F0B4A /* RoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75426761EDD217D008F0B4A /* RoomModel.swift */; };
 		C75426791EDD3178008F0B4A /* Hotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75426781EDD3178008F0B4A /* Hotel.swift */; };
 		C75498271EF62872009AA16E /* DetailTabControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75498261EF62872009AA16E /* DetailTabControllerViewController.swift */; };
-		C7BDF97C1F07992700F04905 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BDF97B1F07992700F04905 /* Events.swift */; };
+		C7BDF97C1F07992700F04905 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BDF97B1F07992700F04905 /* EventManager.swift */; };
+		C7BDF97E1F07A51100F04905 /* EventsConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BDF97D1F07A51100F04905 /* EventsConstant.swift */; };
 		C7DB2A601EDBD19E00C2A207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DB2A5F1EDBD19E00C2A207 /* AppDelegate.swift */; };
 		C7DB2A651EDBD19E00C2A207 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DB2A631EDBD19E00C2A207 /* Main.storyboard */; };
 		C7DB2A681EDBD19E00C2A207 /* HotelManagement.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C7DB2A661EDBD19E00C2A207 /* HotelManagement.xcdatamodeld */; };
@@ -76,7 +77,8 @@
 		C75426761EDD217D008F0B4A /* RoomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomModel.swift; sourceTree = "<group>"; };
 		C75426781EDD3178008F0B4A /* Hotel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hotel.swift; sourceTree = "<group>"; };
 		C75498261EF62872009AA16E /* DetailTabControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTabControllerViewController.swift; sourceTree = "<group>"; };
-		C7BDF97B1F07992700F04905 /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		C7BDF97B1F07992700F04905 /* EventManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
+		C7BDF97D1F07A51100F04905 /* EventsConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsConstant.swift; sourceTree = "<group>"; };
 		C7DB2A5C1EDBD19E00C2A207 /* HotelManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7DB2A5F1EDBD19E00C2A207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7DB2A641EDBD19E00C2A207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -193,7 +195,8 @@
 		C7BDF9761F0795F800F04905 /* EventManager */ = {
 			isa = PBXGroup;
 			children = (
-				C7BDF97B1F07992700F04905 /* Events.swift */,
+				C7BDF97B1F07992700F04905 /* EventManager.swift */,
+				C7BDF97D1F07A51100F04905 /* EventsConstant.swift */,
 			);
 			name = EventManager;
 			sourceTree = "<group>";
@@ -402,8 +405,9 @@
 				C73EDE681EED2E2F0017C125 /* HotelMock.swift in Sources */,
 				C73C4B6F1EEC2F7900A0DDB7 /* Transaction.swift in Sources */,
 				C75426721EDD18D5008F0B4A /* MasterViewController.swift in Sources */,
+				C7BDF97E1F07A51100F04905 /* EventsConstant.swift in Sources */,
 				C73C4B601EEBE47F00A0DDB7 /* Customer.swift in Sources */,
-				C7BDF97C1F07992700F04905 /* Events.swift in Sources */,
+				C7BDF97C1F07992700F04905 /* EventManager.swift in Sources */,
 				C73C4B711EEC2FFB00A0DDB7 /* HourRate.swift in Sources */,
 				C7F289141EE04CCB00A8A9BA /* DetailCollectionViewController.swift in Sources */,
 				C75426771EDD217D008F0B4A /* RoomModel.swift in Sources */,

@@ -9,7 +9,6 @@
 import UIKit
 
 class MasterViewController: UIViewController{
-    var transactionManager: TransactionManager?
     var detailNavigationController: DetailTabControllerViewController?
     
     @IBOutlet weak var SegmentOutlet: UISegmentedControl!
@@ -22,6 +21,7 @@ class MasterViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationView.isHidden = true
+        EventManager.listenTo(eventName: EventsConstant.transaction_change.rawValue, action: renderView)
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,8 +31,7 @@ class MasterViewController: UIViewController{
     
     // setup the refresh view delegate
     func renderView() {
-        if let currentRoom = transactionManager?.CurrentTransaction?.Room {
-            print ("Master View Controler Render view")
+        if let currentRoom = TransactionManager.CurrentTransaction?.Room {
             // set all the seperate view with new object
             self.RoomNumber.text = currentRoom.Name
             self.navigationView.isHidden = false
