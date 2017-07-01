@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7291CA41F07E1C000FE2E44 /* Hotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7291CA31F07E1C000FE2E44 /* Hotel.swift */; };
+		C7291CA61F07E1F700FE2E44 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7291CA51F07E1F700FE2E44 /* Level.swift */; };
 		C73C4B601EEBE47F00A0DDB7 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C4B5F1EEBE47F00A0DDB7 /* Customer.swift */; };
 		C73C4B631EEBE63000A0DDB7 /* Phone.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C4B621EEBE63000A0DDB7 /* Phone.swift */; };
 		C73C4B651EEBEE7A00A0DDB7 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C4B641EEBEE7A00A0DDB7 /* Period.swift */; };
@@ -24,7 +26,7 @@
 		C73EDE681EED2E2F0017C125 /* HotelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73EDE671EED2E2F0017C125 /* HotelMock.swift */; };
 		C75426721EDD18D5008F0B4A /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75426711EDD18D5008F0B4A /* MasterViewController.swift */; };
 		C75426771EDD217D008F0B4A /* RoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75426761EDD217D008F0B4A /* RoomModel.swift */; };
-		C75426791EDD3178008F0B4A /* Hotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75426781EDD3178008F0B4A /* Hotel.swift */; };
+		C75426791EDD3178008F0B4A /* HotelRawData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75426781EDD3178008F0B4A /* HotelRawData.swift */; };
 		C75498271EF62872009AA16E /* DetailTabControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75498261EF62872009AA16E /* DetailTabControllerViewController.swift */; };
 		C7BDF97C1F07992700F04905 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BDF97B1F07992700F04905 /* EventManager.swift */; };
 		C7BDF97E1F07A51100F04905 /* EventsConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BDF97D1F07A51100F04905 /* EventsConstant.swift */; };
@@ -58,6 +60,8 @@
 
 /* Begin PBXFileReference section */
 		C70EE60C1EE97FDA005D66AA /* HotelManagementPlayGround.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HotelManagementPlayGround.playground; sourceTree = "<group>"; };
+		C7291CA31F07E1C000FE2E44 /* Hotel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hotel.swift; sourceTree = "<group>"; };
+		C7291CA51F07E1F700FE2E44 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		C73C4B5F1EEBE47F00A0DDB7 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		C73C4B621EEBE63000A0DDB7 /* Phone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Phone.swift; sourceTree = "<group>"; };
 		C73C4B641EEBEE7A00A0DDB7 /* Period.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
@@ -75,7 +79,7 @@
 		C73EDE671EED2E2F0017C125 /* HotelMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelMock.swift; sourceTree = "<group>"; };
 		C75426711EDD18D5008F0B4A /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		C75426761EDD217D008F0B4A /* RoomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomModel.swift; sourceTree = "<group>"; };
-		C75426781EDD3178008F0B4A /* Hotel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hotel.swift; sourceTree = "<group>"; };
+		C75426781EDD3178008F0B4A /* HotelRawData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelRawData.swift; sourceTree = "<group>"; };
 		C75498261EF62872009AA16E /* DetailTabControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTabControllerViewController.swift; sourceTree = "<group>"; };
 		C7BDF97B1F07992700F04905 /* EventManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		C7BDF97D1F07A51100F04905 /* EventsConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsConstant.swift; sourceTree = "<group>"; };
@@ -169,8 +173,10 @@
 			isa = PBXGroup;
 			children = (
 				C75426761EDD217D008F0B4A /* RoomModel.swift */,
-				C75426781EDD3178008F0B4A /* Hotel.swift */,
+				C75426781EDD3178008F0B4A /* HotelRawData.swift */,
+				C7291CA31F07E1C000FE2E44 /* Hotel.swift */,
 				C73EDE671EED2E2F0017C125 /* HotelMock.swift */,
+				C7291CA51F07E1F700FE2E44 /* Level.swift */,
 			);
 			name = HotelModels;
 			sourceTree = "<group>";
@@ -405,6 +411,7 @@
 				C73EDE681EED2E2F0017C125 /* HotelMock.swift in Sources */,
 				C73C4B6F1EEC2F7900A0DDB7 /* Transaction.swift in Sources */,
 				C75426721EDD18D5008F0B4A /* MasterViewController.swift in Sources */,
+				C7291CA61F07E1F700FE2E44 /* Level.swift in Sources */,
 				C7BDF97E1F07A51100F04905 /* EventsConstant.swift in Sources */,
 				C73C4B601EEBE47F00A0DDB7 /* Customer.swift in Sources */,
 				C7BDF97C1F07992700F04905 /* EventManager.swift in Sources */,
@@ -414,6 +421,7 @@
 				C73EDE621EED0A910017C125 /* DurationViewController.swift in Sources */,
 				C7F289161EE0541400A8A9BA /* RoomCollectionViewCell.swift in Sources */,
 				C73C4B651EEBEE7A00A0DDB7 /* Period.swift in Sources */,
+				C7291CA41F07E1C000FE2E44 /* Hotel.swift in Sources */,
 				C7DB2A601EDBD19E00C2A207 /* AppDelegate.swift in Sources */,
 				C75498271EF62872009AA16E /* DetailTabControllerViewController.swift in Sources */,
 				C73EDE5B1EECF6810017C125 /* DailyRate.swift in Sources */,
@@ -423,7 +431,7 @@
 				C73EDE5D1EECF6AE0017C125 /* Rate.swift in Sources */,
 				C73C4B681EEBF11300A0DDB7 /* TransactionManager.swift in Sources */,
 				C73EDE5F1EED05560017C125 /* CustomerView.swift in Sources */,
-				C75426791EDD3178008F0B4A /* Hotel.swift in Sources */,
+				C75426791EDD3178008F0B4A /* HotelRawData.swift in Sources */,
 				C7DB2A681EDBD19E00C2A207 /* HotelManagement.xcdatamodeld in Sources */,
 				C73C4B631EEBE63000A0DDB7 /* Phone.swift in Sources */,
 				C73EDE661EED27920017C125 /* TransactionsMock.swift in Sources */,

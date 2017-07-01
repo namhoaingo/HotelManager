@@ -21,12 +21,6 @@ class DetailTabControllerViewController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    // segue to something other controller
-    func segueTo(_ segueIden: String){
-        performSegue(withIdentifier: segueIden, sender: self)
-    }
-    
     func ReloadData(){
         switch self.selectedIndex {
         case 0:
