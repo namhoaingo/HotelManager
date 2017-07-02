@@ -11,12 +11,12 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 class DetailCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout{
-    var HotelInitial : HotelMock = HotelMock()
+    var hotelInitial : RoomManager  = RoomManager()
     var myDelegate : Hotel = Hotel()
     var seletedIndex: IndexPath?
     
     override func viewDidLoad() {
-        self.myDelegate = HotelInitial.initialHotel()
+        self.myDelegate = hotelInitial.initHotel()
         super.viewDidLoad()
     }
     
@@ -27,13 +27,13 @@ class DetailCollectionViewController: UICollectionViewController, UICollectionVi
     
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return self.myDelegate.getLevel()
+        return self.myDelegate.Levels.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        let roomInLevel: NSMutableArray = self.myDelegate.getRoomsInLevel(section)
-        return roomInLevel.count
+        return self.myDelegate.getRoomCount(atLevel: section + 2)
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -43,7 +43,7 @@ class DetailCollectionViewController: UICollectionViewController, UICollectionVi
         
         // Configure the cell
         //cell.RoomDisplayLabel.text = "row \(indexPath.row) \r\n + section \(indexPath.section)"
-        cell.RoomDisplayLabel.text = self.myDelegate.getRoom(indexPath.row).Name
+        cell.RoomDisplayLabel.text = self.myDelegate.getRoom(atLevel: indexPath.section + 2, atIndex: indexPath.row).Name
         
         cell.changeNonSelectedColor()
         if self.seletedIndex != nil {
@@ -58,7 +58,7 @@ class DetailCollectionViewController: UICollectionViewController, UICollectionVi
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print ("row \(indexPath.row) + section \(indexPath.section)" );
         // Set current Room in Transaction Manager
-        TransactionManager.setTransaction(self.myDelegate.getRoom(indexPath.row))
+        TransactionManager.setTransaction(self.myDelegate.getRoom(atLevel: indexPath.section + 2, atIndex: indexPath.row))
         
         // Update Color
         self.seletedIndex = indexPath

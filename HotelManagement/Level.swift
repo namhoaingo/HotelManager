@@ -10,6 +10,7 @@ import UIKit
 
 class Level: NSObject {
     var Rooms: NSMutableArray = NSMutableArray()
+    var Number: Int = 0
     
     func getRoom(byIndex index:Int)-> RoomModel{
         return Rooms[index] as! RoomModel

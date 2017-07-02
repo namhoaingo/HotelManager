@@ -9,10 +9,24 @@
 import UIKit
 
 class Hotel: NSObject {
-    var Levels: NSMutableArray = NSMutableArray()
+    var Levels: NSMutableDictionary = NSMutableDictionary()
     
     func addLevel(_ level: Level){
-        Levels.add(level)
+        Levels[level.Number] = level
+    }
+    
+    func addRoom(_ room: RoomModel){
+        if (Levels[room.Floor] != nil)
+        {
+            let level = Levels[room.Floor] as! Level
+            level.addRoom(room)
+        }
+        else{
+            let level = Level()
+            level.Number = room.Floor
+            level.addRoom(room)
+            Levels[level.Number] = level
+        }
     }
     
     func getRoomCount(atLevel level:Int) -> Int{

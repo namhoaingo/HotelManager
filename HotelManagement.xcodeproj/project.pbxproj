@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C714482C1F089B3B00D1FDF0 /* RoomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714482B1F089B3B00D1FDF0 /* RoomManager.swift */; };
 		C7291CA41F07E1C000FE2E44 /* Hotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7291CA31F07E1C000FE2E44 /* Hotel.swift */; };
 		C7291CA61F07E1F700FE2E44 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7291CA51F07E1F700FE2E44 /* Level.swift */; };
 		C73C4B601EEBE47F00A0DDB7 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C4B5F1EEBE47F00A0DDB7 /* Customer.swift */; };
@@ -60,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		C70EE60C1EE97FDA005D66AA /* HotelManagementPlayGround.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HotelManagementPlayGround.playground; sourceTree = "<group>"; };
+		C714482B1F089B3B00D1FDF0 /* RoomManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomManager.swift; sourceTree = "<group>"; };
 		C7291CA31F07E1C000FE2E44 /* Hotel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hotel.swift; sourceTree = "<group>"; };
 		C7291CA51F07E1F700FE2E44 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		C73C4B5F1EEBE47F00A0DDB7 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				C7291CA31F07E1C000FE2E44 /* Hotel.swift */,
 				C73EDE671EED2E2F0017C125 /* HotelMock.swift */,
 				C7291CA51F07E1F700FE2E44 /* Level.swift */,
+				C714482B1F089B3B00D1FDF0 /* RoomManager.swift */,
 			);
 			name = HotelModels;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				C73C4B601EEBE47F00A0DDB7 /* Customer.swift in Sources */,
 				C7BDF97C1F07992700F04905 /* EventManager.swift in Sources */,
 				C73C4B711EEC2FFB00A0DDB7 /* HourRate.swift in Sources */,
+				C714482C1F089B3B00D1FDF0 /* RoomManager.swift in Sources */,
 				C7F289141EE04CCB00A8A9BA /* DetailCollectionViewController.swift in Sources */,
 				C75426771EDD217D008F0B4A /* RoomModel.swift in Sources */,
 				C73EDE621EED0A910017C125 /* DurationViewController.swift in Sources */,
