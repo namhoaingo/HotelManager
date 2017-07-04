@@ -15,7 +15,7 @@ struct RoomManager {
         for room in hotelRawData.RoomCollections{
             let roomModel = room as! RoomModel
             hotel.addRoom(roomModel)
-        }
+        }        
         
         return hotel
     }
