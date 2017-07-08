@@ -21,7 +21,7 @@
 		C73EDE5B1EECF6810017C125 /* DailyRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73EDE5A1EECF6810017C125 /* DailyRate.swift */; };
 		C73EDE5D1EECF6AE0017C125 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73EDE5C1EECF6AE0017C125 /* Rate.swift */; };
 		C73EDE5F1EED05560017C125 /* CustomerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73EDE5E1EED05560017C125 /* CustomerView.swift */; };
-		C73EDE621EED0A910017C125 /* DurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73EDE611EED0A910017C125 /* DurationViewController.swift */; };
+		C73EDE621EED0A910017C125 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73EDE611EED0A910017C125 /* TransactionViewController.swift */; };
 		C73EDE641EED0DBA0017C125 /* BeverageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73EDE631EED0DBA0017C125 /* BeverageViewController.swift */; };
 		C73EDE661EED27920017C125 /* TransactionsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73EDE651EED27920017C125 /* TransactionsMock.swift */; };
 		C73EDE681EED2E2F0017C125 /* HotelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73EDE671EED2E2F0017C125 /* HotelMock.swift */; };
@@ -29,6 +29,8 @@
 		C75426771EDD217D008F0B4A /* RoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75426761EDD217D008F0B4A /* RoomModel.swift */; };
 		C75426791EDD3178008F0B4A /* HotelRawData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75426781EDD3178008F0B4A /* HotelRawData.swift */; };
 		C75498271EF62872009AA16E /* DetailTabControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75498261EF62872009AA16E /* DetailTabControllerViewController.swift */; };
+		C77E5B701F11016400F2DE65 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E5B6F1F11016400F2DE65 /* Item.swift */; };
+		C77E5B731F110AA200F2DE65 /* BeverageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E5B721F110AA200F2DE65 /* BeverageItem.swift */; };
 		C7BDF97C1F07992700F04905 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BDF97B1F07992700F04905 /* EventManager.swift */; };
 		C7BDF97E1F07A51100F04905 /* EventsConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BDF97D1F07A51100F04905 /* EventsConstant.swift */; };
 		C7DB2A601EDBD19E00C2A207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DB2A5F1EDBD19E00C2A207 /* AppDelegate.swift */; };
@@ -75,7 +77,7 @@
 		C73EDE5A1EECF6810017C125 /* DailyRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyRate.swift; sourceTree = "<group>"; };
 		C73EDE5C1EECF6AE0017C125 /* Rate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 		C73EDE5E1EED05560017C125 /* CustomerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerView.swift; sourceTree = "<group>"; };
-		C73EDE611EED0A910017C125 /* DurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DurationViewController.swift; sourceTree = "<group>"; };
+		C73EDE611EED0A910017C125 /* TransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		C73EDE631EED0DBA0017C125 /* BeverageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeverageViewController.swift; sourceTree = "<group>"; };
 		C73EDE651EED27920017C125 /* TransactionsMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsMock.swift; sourceTree = "<group>"; };
 		C73EDE671EED2E2F0017C125 /* HotelMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelMock.swift; sourceTree = "<group>"; };
@@ -83,6 +85,8 @@
 		C75426761EDD217D008F0B4A /* RoomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomModel.swift; sourceTree = "<group>"; };
 		C75426781EDD3178008F0B4A /* HotelRawData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelRawData.swift; sourceTree = "<group>"; };
 		C75498261EF62872009AA16E /* DetailTabControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTabControllerViewController.swift; sourceTree = "<group>"; };
+		C77E5B6F1F11016400F2DE65 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		C77E5B721F110AA200F2DE65 /* BeverageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeverageItem.swift; sourceTree = "<group>"; };
 		C7BDF97B1F07992700F04905 /* EventManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		C7BDF97D1F07A51100F04905 /* EventsConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsConstant.swift; sourceTree = "<group>"; };
 		C7DB2A5C1EDBD19E00C2A207 /* HotelManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,9 +166,10 @@
 		C73EDE601EED06080017C125 /* DetailViews */ = {
 			isa = PBXGroup;
 			children = (
+				C77E5B741F11173C00F2DE65 /* TransactionViewComponents */,
 				C75498251EF62839009AA16E /* Navigation */,
 				C75426711EDD18D5008F0B4A /* MasterViewController.swift */,
-				C73EDE611EED0A910017C125 /* DurationViewController.swift */,
+				C73EDE611EED0A910017C125 /* TransactionViewController.swift */,
 				C73EDE5E1EED05560017C125 /* CustomerView.swift */,
 				C73EDE631EED0DBA0017C125 /* BeverageViewController.swift */,
 			);
@@ -180,6 +185,8 @@
 				C73EDE671EED2E2F0017C125 /* HotelMock.swift */,
 				C7291CA51F07E1F700FE2E44 /* Level.swift */,
 				C714482B1F089B3B00D1FDF0 /* RoomManager.swift */,
+				C77E5B6F1F11016400F2DE65 /* Item.swift */,
+				C77E5B721F110AA200F2DE65 /* BeverageItem.swift */,
 			);
 			name = HotelModels;
 			sourceTree = "<group>";
@@ -199,6 +206,13 @@
 				C75498261EF62872009AA16E /* DetailTabControllerViewController.swift */,
 			);
 			name = Navigation;
+			sourceTree = "<group>";
+		};
+		C77E5B741F11173C00F2DE65 /* TransactionViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TransactionViewComponents;
 			sourceTree = "<group>";
 		};
 		C7BDF9761F0795F800F04905 /* EventManager */ = {
@@ -414,6 +428,7 @@
 				C73EDE681EED2E2F0017C125 /* HotelMock.swift in Sources */,
 				C73C4B6F1EEC2F7900A0DDB7 /* Transaction.swift in Sources */,
 				C75426721EDD18D5008F0B4A /* MasterViewController.swift in Sources */,
+				C77E5B731F110AA200F2DE65 /* BeverageItem.swift in Sources */,
 				C7291CA61F07E1F700FE2E44 /* Level.swift in Sources */,
 				C7BDF97E1F07A51100F04905 /* EventsConstant.swift in Sources */,
 				C73C4B601EEBE47F00A0DDB7 /* Customer.swift in Sources */,
@@ -422,7 +437,7 @@
 				C714482C1F089B3B00D1FDF0 /* RoomManager.swift in Sources */,
 				C7F289141EE04CCB00A8A9BA /* DetailCollectionViewController.swift in Sources */,
 				C75426771EDD217D008F0B4A /* RoomModel.swift in Sources */,
-				C73EDE621EED0A910017C125 /* DurationViewController.swift in Sources */,
+				C73EDE621EED0A910017C125 /* TransactionViewController.swift in Sources */,
 				C7F289161EE0541400A8A9BA /* RoomCollectionViewCell.swift in Sources */,
 				C73C4B651EEBEE7A00A0DDB7 /* Period.swift in Sources */,
 				C7291CA41F07E1C000FE2E44 /* Hotel.swift in Sources */,
@@ -439,6 +454,7 @@
 				C7DB2A681EDBD19E00C2A207 /* HotelManagement.xcdatamodeld in Sources */,
 				C73C4B631EEBE63000A0DDB7 /* Phone.swift in Sources */,
 				C73EDE661EED27920017C125 /* TransactionsMock.swift in Sources */,
+				C77E5B701F11016400F2DE65 /* Item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

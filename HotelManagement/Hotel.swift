@@ -10,7 +10,7 @@ import UIKit
 
 class Hotel: NSObject {
     var Levels: NSMutableDictionary = NSMutableDictionary()
-    
+    var BeverageList: NSMutableArray = NSMutableArray()
     func addLevel(_ level: Level){
         Levels[level.Number] = level
     }
@@ -37,5 +37,13 @@ class Hotel: NSObject {
     func getRoom(atLevel level:Int, atIndex index: Int)-> RoomModel{
         let level = Levels[level] as! Level
         return level.getRoom(byIndex: index)
+    }
+    
+    func addBeverage(_ item: Item){
+        self.BeverageList.add(item)
+    }
+    
+    func getBeverageList()-> NSMutableArray{
+        return self.BeverageList
     }
 }

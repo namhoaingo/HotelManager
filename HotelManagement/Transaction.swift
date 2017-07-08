@@ -14,6 +14,7 @@ class Transaction: NSObject, NSCopying{
     var Period: Period?
     var Customer: Customer?
     var Comment: Comment?
+    var BeverageItems: NSMutableArray?
     
     // Constructor
     
@@ -25,6 +26,7 @@ class Transaction: NSObject, NSCopying{
         transaction.Period = self.Period
         transaction.Customer = self.Customer
         transaction.Comment = self.Comment
+        transaction.BeverageItems = self.BeverageItems
         
         return transaction
     }

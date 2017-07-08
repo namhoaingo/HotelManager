@@ -17,6 +17,11 @@ struct RoomManager {
             hotel.addRoom(roomModel)
         }        
         
+        for item in hotelRawData.BeverageList{
+            let itemModel = item as! Item
+            hotel.addBeverage(itemModel)
+        }
+        
         return hotel
     }
 }

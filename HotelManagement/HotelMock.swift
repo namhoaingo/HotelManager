@@ -21,6 +21,13 @@ class HotelMock: NSObject {
         hotel.addRoom(RoomModel("404", "404", 4, 200.0))
         hotel.addRoom(RoomModel("405", "405", 4, 200.0))
         hotel.addRoom(RoomModel("406", "406", 4, 200.0))
+        
+        // Beverage
+        hotel.addBeverage(Item("117", "Food1", Price(10.0, "VND")))
+        hotel.addBeverage(Item("118", "Food2", Price(11.0, "VND")))
+        hotel.addBeverage(Item("119", "Food3", Price(12.0, "VND")))
+        hotel.addBeverage(Item("120", "Food4", Price(13.0, "VND")))
+        hotel.addBeverage(Item("130", "Food5", Price(14.0, "VND")))
         return hotel
     }
 }

@@ -10,12 +10,20 @@ import Foundation
 
 class HotelRawData: NSObject{
     var RoomCollections: NSMutableArray = NSMutableArray()
-    
+    var BeverageList: NSMutableArray = NSMutableArray()
     func addRoom(_ room: RoomModel){
         self.RoomCollections.add(room)
     }
     
     func removeRoom(_ room: RoomModel){
         self.RoomCollections.removeObject(identicalTo: room)
+    }
+    
+    func addBeverage(_ item: Item){
+        self.BeverageList.add(item)
+    }
+    
+    func removeBeverage(_ item: Item){
+        self.BeverageList.remove(item)
     }
 }

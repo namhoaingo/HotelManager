@@ -124,7 +124,6 @@
         <!--Room Control-->
         <scene sceneID="e7E-fs-4me">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N4R-GE-Zef" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="eoN-yQ-tI8" customClass="MasterViewController" customModule="HotelManagement" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f6x-L2-oAy"/>
@@ -143,7 +142,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4qe-gD-jnD">
                                 <rect key="frame" x="37" y="25" width="274" height="27"/>
                                 <segments>
-                                    <segment title="Duration"/>
+                                    <segment title="Transaction"/>
                                     <segment title="Customer"/>
                                 </segments>
                                 <connections>
@@ -193,13 +192,14 @@
                         <outlet property="navigationView" destination="cae-0K-WaM" id="8XH-Gu-KZU"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N4R-GE-Zef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="892.79999999999995" y="453.37331334332839"/>
         </scene>
         <!--Item-->
         <scene sceneID="t5H-WC-XfA">
             <objects>
-                <viewController id="xCM-Wm-Kzc" customClass="DurationViewController" customModule="HotelManagement" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xCM-Wm-Kzc" customClass="TransactionViewController" customModule="HotelManagement" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LQr-yL-nap"/>
                         <viewControllerLayoutGuide type="bottom" id="WZV-eG-aQh"/>
@@ -301,9 +301,12 @@
                     <tabBarItem key="tabBarItem" title="Item" id="OE5-K9-HTV"/>
                     <navigationItem key="navigationItem" id="WgY-gW-9P3"/>
                     <connections>
+                        <outlet property="BeveragePick" destination="lnf-Zn-FIH" id="Flb-9s-Owz"/>
                         <outlet property="CheckIn" destination="SUx-Nz-RJx" id="bSF-Wy-4be"/>
                         <outlet property="CheckInPicker" destination="YLW-vN-c7k" id="Swn-go-y5U"/>
                         <outlet property="CheckOutPicker" destination="CDR-ry-jFm" id="dR5-KN-xWA"/>
+                        <outlet property="ItemCount" destination="jVU-z9-bDP" id="Wlu-Ym-PZB"/>
+                        <outlet property="QuantityControl" destination="s3w-be-Nvb" id="qvV-Sg-Pxu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F9q-NN-myE" userLabel="First Responder" sceneMemberID="firstResponder"/>

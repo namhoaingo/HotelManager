@@ -1,5 +1,5 @@
 //
-//  DurationViewController.swift
+//  TransactionViewController.swift
 //  HotelManagement
 //
 //  Created by Darwin on 11/06/2017.
@@ -8,7 +8,10 @@
 
 import UIKit
 
-class DurationViewController: UIViewController {
+class TransactionViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    @IBOutlet weak var QuantityControl: UIStepper!
+    @IBOutlet weak var ItemCount: UILabel!
+    @IBOutlet weak var BeveragePick: UIPickerView!
     @IBOutlet weak var CheckIn: UILabel!
     @IBOutlet weak var CheckOut: UILabel!
     @IBOutlet weak var CheckInPicker: UIDatePicker!
@@ -19,6 +22,7 @@ class DurationViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {        
         self.reloadData()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,9 +48,7 @@ class DurationViewController: UIViewController {
     
     func reloadData()
     {
-        if TransactionManager.CurrentTransaction != nil{
-            print ("Duration View Controller Re load")
-            
+        if TransactionManager.CurrentTransaction != nil{            
             if let checkInTime = TransactionManager.CurrentTransaction!.Period!.CheckInDateTime{
                 CheckInPicker.date = checkInTime as Date
             }
@@ -54,6 +56,22 @@ class DurationViewController: UIViewController {
             if let checkOutTime = TransactionManager.CurrentTransaction!.Period!.CheckOutDateTime{
                 CheckOutPicker.date = checkOutTime as Date
             }
+            self.BeveragePick.dataSource = self
+            self.BeveragePick.delegate = self
+            self.BeveragePick.reloadComponent(1)
         }
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return (TransactionManager.BeverageList?.count)!
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let berItem: Item = TransactionManager.getBeverageAtIndex(row)
+        return berItem.title
     }
 }

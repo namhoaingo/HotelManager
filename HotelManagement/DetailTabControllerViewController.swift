@@ -24,8 +24,8 @@ class DetailTabControllerViewController: UITabBarController {
     func ReloadData(){
         switch self.selectedIndex {
         case 0:
-            let durationViewController: DurationViewController = self.selectedViewController as! DurationViewController
-            durationViewController.reloadData()
+            let transactionViewController: TransactionViewController = self.selectedViewController as! TransactionViewController
+            transactionViewController.reloadData()
             break
         default:
             break

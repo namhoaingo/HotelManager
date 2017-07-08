@@ -11,10 +11,11 @@ import Foundation
 struct TransactionManager {
     // Dictionary contains Room key and Transaction object
     static var RentalDictionary: NSMutableDictionary =  NSMutableDictionary();
-
-    static var CurrentTransaction: Transaction?
     
-    static func setTransaction(_ room: RoomModel){
+    static var CurrentTransaction: Transaction?
+    static var BeverageList: NSMutableArray?
+    
+    static func setTransaction(_ room: RoomModel, _ beverage: NSMutableArray){
         
         if RentalDictionary[room.Id] != nil{
             // update
@@ -26,11 +27,10 @@ struct TransactionManager {
             // Add to Transaction
             RentalDictionary[newTransaction.Room!.Id] = newTransaction
         }
-        
-        // Raise Event 
+        self.BeverageList = beverage        
+        // Raise Event
         EventManager.trigger(eventName: EventsConstant.transaction_change.rawValue, information: "")
     }
-    
     
     static func getNewRental(_ room: RoomModel)-> Transaction{
         let transaction: Transaction = Transaction()
@@ -41,6 +41,7 @@ struct TransactionManager {
         transaction.Period = Period()
         transaction.Customer = Customer()
         transaction.Comment = Comment()
+        transaction.BeverageItems = NSMutableArray()
         transaction.Room = room
         
         return transaction
@@ -73,5 +74,10 @@ struct TransactionManager {
     static func setCurrentCheckOutDate(_ checkOutDate: NSDate)
     {
         self.CurrentTransaction?.Period?.CheckOutDateTime = checkOutDate
+    }
+    
+    //Beverage
+    static func getBeverageAtIndex(_ index: Int)-> Item{
+        return self.BeverageList?[index] as! Item
     }
 }

@@ -50,14 +50,13 @@ class DetailCollectionViewController: UICollectionViewController, UICollectionVi
             }
         }
         
-        print(cell.contentView.frame.size)
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print ("row \(indexPath.row) + section \(indexPath.section)" );
+        //print ("row \(indexPath.row) + section \(indexPath.section)" );
         // Set current Room in Transaction Manager
-        TransactionManager.setTransaction(self.myDelegate.getRoom(atLevel: self.myDelegate.Levels.count - indexPath.section + 1 , atIndex: indexPath.row))
+        TransactionManager.setTransaction(self.myDelegate.getRoom(atLevel: self.myDelegate.Levels.count - indexPath.section + 1 , atIndex: indexPath.row), self.myDelegate.getBeverageList())
         
         // Update Color
         self.seletedIndex = indexPath
