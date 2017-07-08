@@ -49,6 +49,8 @@ class DetailCollectionViewController: UICollectionViewController, UICollectionVi
                 cell.changeSelectedColor()
             }
         }
+        
+        print(cell.contentView.frame.size)
         return cell
     }
     
@@ -62,15 +64,17 @@ class DetailCollectionViewController: UICollectionViewController, UICollectionVi
         collectionView.reloadData()
     }
     
-     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        
-    }
-    
     /*Lay out Collection View Cell */
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat(50)
-    }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        // get room count in each section
+        let roomCount = self.myDelegate.getRoomCount(atLevel: self.myDelegate.Levels.count - section + 1)
+        var edgeInset:UIEdgeInsets
+        let currentSize = self.view.frame.size;
+        let margin = currentSize.width/(CGFloat(roomCount)*2) - 110 > 0 ? currentSize.width/(CGFloat(roomCount)*2) - 110 : 0
+
+        edgeInset = UIEdgeInsets(top: 10, left: margin, bottom: 10, right: margin)
+        return edgeInset
+    }
 }
