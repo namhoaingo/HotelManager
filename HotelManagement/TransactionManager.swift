@@ -55,7 +55,6 @@ struct TransactionManager {
         // Check for adding new or edditing
         if let currentRoom = transaction.Room {
             RentalDictionary.setObject(currentRoom.Id, forKey: transaction)
-            
         }
     }
     
@@ -76,8 +75,31 @@ struct TransactionManager {
         self.CurrentTransaction?.Period?.CheckOutDateTime = checkOutDate
     }
     
-    //Beverage
+    
+    // Beverage Item
+    static func getBeverageItems()-> NSMutableArray{
+        return (self.CurrentTransaction?.BeverageItems)!
+    }
+    
+    static func addBeverageItem(_ item: Item, _ quantity: Int){
+        // find BeverageItem in the aray
+        var addingBeverageItem = BeverageItem(item, quantity)
+        
+        if (CurrentTransaction?.isBeverageExist(item))!{
+            if let existingBeverage: BeverageItem = (CurrentTransaction?.getExistingBeverage(item)){
+                addingBeverageItem = existingBeverage
+                addingBeverageItem.Quantity = addingBeverageItem.Quantity + quantity
+            }
+        }
+        else{
+            self.CurrentTransaction?.BeverageItems?.add(addingBeverageItem)
+        }
+    }
+    
+    //Beverage Available
     static func getBeverageAtIndex(_ index: Int)-> Item{
         return self.BeverageList?[index] as! Item
     }
+    
+    
 }

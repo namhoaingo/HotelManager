@@ -9,13 +9,13 @@
 import UIKit
 
 class Item: NSObject {
-    var sku: String = ""
-    var title: String = ""
-    var price: Price?
+    var Sku: String = ""
+    var Title: String = ""
+    var Price: Price?
     
     init(_ sku: String, _ title: String, _ price: Price) {
-        self.sku = sku
-        self.title = title
-        self.price = price
+        self.Sku = sku
+        self.Title = title
+        self.Price = price
     }
 }

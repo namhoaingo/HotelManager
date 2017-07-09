@@ -42,6 +42,8 @@
 		C7DB2A831EDBD19E00C2A207 /* HotelManagementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DB2A821EDBD19E00C2A207 /* HotelManagementUITests.swift */; };
 		C7F289141EE04CCB00A8A9BA /* DetailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F289131EE04CCB00A8A9BA /* DetailCollectionViewController.swift */; };
 		C7F289161EE0541400A8A9BA /* RoomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F289151EE0541400A8A9BA /* RoomCollectionViewCell.swift */; };
+		C7F611121F11CB34002CE00C /* BeverageTableViewDataSourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F611111F11CB34002CE00C /* BeverageTableViewDataSourceAndDelegate.swift */; };
+		C7F611151F11EC55002CE00C /* BeverageItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F611141F11EC55002CE00C /* BeverageItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		C7DB2A841EDBD19E00C2A207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7F289131EE04CCB00A8A9BA /* DetailCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewController.swift; sourceTree = "<group>"; };
 		C7F289151EE0541400A8A9BA /* RoomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomCollectionViewCell.swift; sourceTree = "<group>"; };
+		C7F611111F11CB34002CE00C /* BeverageTableViewDataSourceAndDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeverageTableViewDataSourceAndDelegate.swift; sourceTree = "<group>"; };
+		C7F611141F11EC55002CE00C /* BeverageItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeverageItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 		C73C4B661EEBEE7E00A0DDB7 /* RentalModel */ = {
 			isa = PBXGroup;
 			children = (
+				C77E5B721F110AA200F2DE65 /* BeverageItem.swift */,
 				C73C4B641EEBEE7A00A0DDB7 /* Period.swift */,
 				C73C4B691EEBF15200A0DDB7 /* Comment.swift */,
 				C73C4B6C1EEBF38800A0DDB7 /* Price.swift */,
@@ -166,9 +171,10 @@
 		C73EDE601EED06080017C125 /* DetailViews */ = {
 			isa = PBXGroup;
 			children = (
+				C75426711EDD18D5008F0B4A /* MasterViewController.swift */,
+				C7F611131F11CB3B002CE00C /* BeverageViewComponent */,
 				C77E5B741F11173C00F2DE65 /* TransactionViewComponents */,
 				C75498251EF62839009AA16E /* Navigation */,
-				C75426711EDD18D5008F0B4A /* MasterViewController.swift */,
 				C73EDE611EED0A910017C125 /* TransactionViewController.swift */,
 				C73EDE5E1EED05560017C125 /* CustomerView.swift */,
 				C73EDE631EED0DBA0017C125 /* BeverageViewController.swift */,
@@ -186,7 +192,6 @@
 				C7291CA51F07E1F700FE2E44 /* Level.swift */,
 				C714482B1F089B3B00D1FDF0 /* RoomManager.swift */,
 				C77E5B6F1F11016400F2DE65 /* Item.swift */,
-				C77E5B721F110AA200F2DE65 /* BeverageItem.swift */,
 			);
 			name = HotelModels;
 			sourceTree = "<group>";
@@ -289,6 +294,15 @@
 				C7DB2A661EDBD19E00C2A207 /* HotelManagement.xcdatamodeld */,
 			);
 			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C7F611131F11CB3B002CE00C /* BeverageViewComponent */ = {
+			isa = PBXGroup;
+			children = (
+				C7F611111F11CB34002CE00C /* BeverageTableViewDataSourceAndDelegate.swift */,
+				C7F611141F11EC55002CE00C /* BeverageItemCell.swift */,
+			);
+			name = BeverageViewComponent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C73EDE681EED2E2F0017C125 /* HotelMock.swift in Sources */,
+				C7F611151F11EC55002CE00C /* BeverageItemCell.swift in Sources */,
 				C73C4B6F1EEC2F7900A0DDB7 /* Transaction.swift in Sources */,
 				C75426721EDD18D5008F0B4A /* MasterViewController.swift in Sources */,
 				C77E5B731F110AA200F2DE65 /* BeverageItem.swift in Sources */,
@@ -439,6 +454,7 @@
 				C75426771EDD217D008F0B4A /* RoomModel.swift in Sources */,
 				C73EDE621EED0A910017C125 /* TransactionViewController.swift in Sources */,
 				C7F289161EE0541400A8A9BA /* RoomCollectionViewCell.swift in Sources */,
+				C7F611121F11CB34002CE00C /* BeverageTableViewDataSourceAndDelegate.swift in Sources */,
 				C73C4B651EEBEE7A00A0DDB7 /* Period.swift in Sources */,
 				C7291CA41F07E1C000FE2E44 /* Hotel.swift in Sources */,
 				C7DB2A601EDBD19E00C2A207 /* AppDelegate.swift in Sources */,

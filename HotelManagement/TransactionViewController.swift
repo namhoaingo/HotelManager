@@ -16,8 +16,15 @@ class TransactionViewController: UIViewController, UIPickerViewDataSource, UIPic
     @IBOutlet weak var CheckOut: UILabel!
     @IBOutlet weak var CheckInPicker: UIDatePicker!
     @IBOutlet weak var CheckOutPicker: UIDatePicker!
+    @IBOutlet weak var BeverageTable: UITableView!
+    var beverageTableDataSourceAngDelegate: BeverageTableViewDataSourceAndDelegate = BeverageTableViewDataSourceAndDelegate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Init datasource for Beverage Table
+        
+        self.BeverageTable.dataSource = self.beverageTableDataSourceAngDelegate
+        self.BeverageTable.delegate = self.beverageTableDataSourceAngDelegate
     }
     
     override func viewWillAppear(_ animated: Bool) {        
@@ -56,9 +63,14 @@ class TransactionViewController: UIViewController, UIPickerViewDataSource, UIPic
             if let checkOutTime = TransactionManager.CurrentTransaction!.Period!.CheckOutDateTime{
                 CheckOutPicker.date = checkOutTime as Date
             }
+            // Reload Beverage selection Dropdown list
             self.BeveragePick.dataSource = self
             self.BeveragePick.delegate = self
-            self.BeveragePick.reloadComponent(1)
+            self.BeveragePick.reloadAllComponents()
+            
+            // Reload Beverage Table
+            self.beverageTableDataSourceAngDelegate.BeverageItems = TransactionManager.getBeverageItems()
+            self.BeverageTable.reloadData()
         }
     }
     
@@ -66,12 +78,18 @@ class TransactionViewController: UIViewController, UIPickerViewDataSource, UIPic
         return 1
     }
     
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return (TransactionManager.BeverageList?.count)!
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let berItem: Item = TransactionManager.getBeverageAtIndex(row)
-        return berItem.title
+        return berItem.Title + berItem.Price.A
+    }
+    @IBAction func QuantityChange(_ sender: Any) {
+        let beverageEditing = self.BeveragePick.selectedRow(inComponent: 0)
+        TransactionManager.addBeverageItem(TransactionManager.BeverageList?[beverageEditing] as! Item, 1)
+        self.BeverageTable.reloadData()
     }
 }

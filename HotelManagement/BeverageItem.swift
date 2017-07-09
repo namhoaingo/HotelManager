@@ -9,11 +9,11 @@
 import UIKit
 
 class BeverageItem: NSObject {
-    var item: Item?
+    var Item: Item?
     var Quantity: Int = 0
     
     init(_ item: Item, _ quantity: Int){
-        self.item = item
+        self.Item = item
         self.Quantity = quantity
     }
     

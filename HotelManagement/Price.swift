@@ -17,4 +17,8 @@ class Price: NSObject{
         Currency = currency
         super.init()
     }
+    
+    func toString() -> String{
+    return String(describing: self.Amount) + self.Currency
+    }
 }
