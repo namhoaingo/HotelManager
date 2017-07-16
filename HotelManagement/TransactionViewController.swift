@@ -18,6 +18,8 @@ class TransactionViewController: UIViewController, UIPickerViewDataSource, UIPic
     @IBOutlet weak var CheckOutPicker: UIDatePicker!
     @IBOutlet weak var BeverageTable: UITableView!
     var beverageTableDataSourceAngDelegate: BeverageTableViewDataSourceAndDelegate = BeverageTableViewDataSourceAndDelegate()
+    var oldValue = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,8 @@ class TransactionViewController: UIViewController, UIPickerViewDataSource, UIPic
         
         self.BeverageTable.dataSource = self.beverageTableDataSourceAngDelegate
         self.BeverageTable.delegate = self.beverageTableDataSourceAngDelegate
+        self.ItemCount.text = "1"
+        oldValue = Int(QuantityControl.value);
     }
     
     override func viewWillAppear(_ animated: Bool) {        
@@ -85,11 +89,25 @@ class TransactionViewController: UIViewController, UIPickerViewDataSource, UIPic
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let berItem: Item = TransactionManager.getBeverageAtIndex(row)
-        return berItem.Title + berItem.Price.A
+        return berItem.Title + String(describing: berItem.Price?.Amount)
     }
+    
+    
+    // Picker Action
     @IBAction func QuantityChange(_ sender: Any) {
+        var edittingValue = 1;
+        if (Int(QuantityControl.value)>oldValue) {
+            oldValue = oldValue + 1
+            edittingValue = 1
+        }
+        else{
+            oldValue = oldValue - 1
+            edittingValue = -1
+        }
+
+        
         let beverageEditing = self.BeveragePick.selectedRow(inComponent: 0)
-        TransactionManager.addBeverageItem(TransactionManager.BeverageList?[beverageEditing] as! Item, 1)
+        TransactionManager.addBeverageItem(TransactionManager.BeverageList?[beverageEditing] as! Item, edittingValue)
         self.BeverageTable.reloadData()
     }
 }

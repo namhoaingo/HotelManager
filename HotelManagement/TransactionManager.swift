@@ -83,15 +83,18 @@ struct TransactionManager {
     
     static func addBeverageItem(_ item: Item, _ quantity: Int){
         // find BeverageItem in the aray
-        var addingBeverageItem = BeverageItem(item, quantity)
         
         if (CurrentTransaction?.isBeverageExist(item))!{
             if let existingBeverage: BeverageItem = (CurrentTransaction?.getExistingBeverage(item)){
-                addingBeverageItem = existingBeverage
-                addingBeverageItem.Quantity = addingBeverageItem.Quantity + quantity
+                existingBeverage.Quantity = existingBeverage.Quantity + quantity
+                if(existingBeverage.Quantity == 0){
+                    // remove the item 
+                    CurrentTransaction?.removeBeverage(item)
+                }
             }
         }
         else{
+            let addingBeverageItem = BeverageItem(item, quantity)
             self.CurrentTransaction?.BeverageItems?.add(addingBeverageItem)
         }
     }

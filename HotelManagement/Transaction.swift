@@ -43,8 +43,7 @@ class Transaction: NSObject, NSCopying{
     }
     
     func getExistingBeverage(_ item: Item) -> BeverageItem?{
-        let beverageItemsCopy = self.BeverageItems!
-        let itemMatch:[Any] = beverageItemsCopy.filtered(using: NSPredicate(format: "Item.Sku MATCHES %@", item.Sku) )
+        let itemMatch: [Any] = findBeverageItem(item)
         
         if(itemMatch.count > 0)
         {
@@ -53,5 +52,20 @@ class Transaction: NSObject, NSCopying{
         else{
             return nil
         }
+    }
+    
+    func removeBeverage(_ item: Item){
+        let itemMatch: [Any] = findBeverageItem(item)
+        
+        if (itemMatch.count > 0)
+        {
+            return (self.BeverageItems?.remove(itemMatch.first))!
+        }
+    }
+    
+    func findBeverageItem(_ item: Item)-> [Any]{
+        let beverageItemsCopy = self.BeverageItems!
+        let itemMatch:[Any] = beverageItemsCopy.filtered(using: NSPredicate(format: "Item.Sku MATCHES %@", item.Sku) )
+        return itemMatch
     }
 }

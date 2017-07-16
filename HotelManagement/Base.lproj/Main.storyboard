@@ -76,6 +76,7 @@
         <!--Customer-->
         <scene sceneID="uVY-bK-mQE">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aJJ-pz-amO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="bpB-8E-B6J" customClass="CustomerViewController" customModule="HotelManagement" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mBt-gi-VqI"/>
@@ -105,21 +106,39 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4w1-lZ-LV1">
+                                <rect key="frame" x="35" y="95" width="49" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="XWF-IC-7yq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="whq-UW-Ygr">
+                                <rect key="frame" x="146" y="95" width="141" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="VtC-l6-af8" secondAttribute="trailing" constant="13" id="0tO-RO-Z86"/>
+                            <constraint firstItem="whq-UW-Ygr" firstAttribute="top" secondItem="VtC-l6-af8" secondAttribute="bottom" constant="32" id="66a-X1-h0W"/>
                             <constraint firstItem="PO2-Ma-UsM" firstAttribute="leading" secondItem="e0R-Db-yoZ" secondAttribute="leadingMargin" constant="16" id="EHG-eg-BtE"/>
                             <constraint firstItem="PO2-Ma-UsM" firstAttribute="top" secondItem="mBt-gi-VqI" secondAttribute="bottom" constant="31" id="KNo-rr-slJ"/>
                             <constraint firstItem="VtC-l6-af8" firstAttribute="top" secondItem="mBt-gi-VqI" secondAttribute="bottom" constant="33" id="R4N-Dg-shw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="whq-UW-Ygr" secondAttribute="trailing" constant="13" id="XbV-uf-asK"/>
+                            <constraint firstItem="4w1-lZ-LV1" firstAttribute="leading" secondItem="e0R-Db-yoZ" secondAttribute="leadingMargin" constant="19" id="io3-BJ-ueL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VtC-l6-af8" secondAttribute="trailing" constant="13" id="rVr-NQ-jP0"/>
+                            <constraint firstItem="4w1-lZ-LV1" firstAttribute="top" secondItem="PO2-Ma-UsM" secondAttribute="bottom" constant="29" id="wba-KS-gDn"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Customer" id="KhZ-Hc-BcV"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aJJ-pz-amO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="892.79999999999995" y="1898.5007496251876"/>
+            <point key="canvasLocation" x="1421" y="1898"/>
         </scene>
         <!--Room Control-->
         <scene sceneID="e7E-fs-4me">
@@ -154,7 +173,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="YVI-5g-yeK"/>
                                 </constraints>
-                                <state key="normal" title="Check In"/>
+                                <state key="normal" title="Save"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Room #" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yj-8o-4cc">
                                 <rect key="frame" x="145" y="90" width="59" height="21"/>
@@ -376,25 +395,6 @@
             </objects>
             <point key="canvasLocation" x="-236" y="88"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="Spf-2b-9L1">
-            <objects>
-                <viewController id="EMb-5z-GqJ" customClass="BeverageViewController" customModule="HotelManagement" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xGA-a8-Qfw"/>
-                        <viewControllerLayoutGuide type="bottom" id="AS9-51-Sxj"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4RY-Dr-mCE">
-                        <rect key="frame" x="0.0" y="0.0" width="316" height="516"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="jcj-m0-wKt"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ui-Oy-DL1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1488" y="1899"/>
-        </scene>
         <!--Detail Tab Controller View Controller-->
         <scene sceneID="O1W-nu-5jP">
             <objects>
@@ -408,7 +408,6 @@
                     <connections>
                         <segue destination="xCM-Wm-Kzc" kind="relationship" relationship="viewControllers" id="Zqf-j4-ufR"/>
                         <segue destination="bpB-8E-B6J" kind="relationship" relationship="viewControllers" id="O6U-Eb-hJ8"/>
-                        <segue destination="EMb-5z-GqJ" kind="relationship" relationship="viewControllers" id="6s3-Fq-Ucm"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23x-Yp-pOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
